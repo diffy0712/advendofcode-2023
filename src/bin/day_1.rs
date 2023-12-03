@@ -21,7 +21,6 @@ fn get_sum_of_calibrations(input: &String, normalize: bool) -> u32 {
 }
 
 fn calculate_calibration_value(line: &str, normalize: bool)-> u32 {
-    println!("{:?}", line);
     let calibration_line = if normalize { 
         normalize_calibration_value_input(line)
     } else {
