@@ -86,7 +86,7 @@ fn get_hand_type(cards: &Vec<usize>, jokers: bool) -> HandType {
         }
     }
 
-    let result = match kinds.len() {
+    return match kinds.len() {
         1 => HandType::FiveOfAKind,
         2 => match kinds.values().find(|value| **value == 4_u8) {
             Some(_) => HandType::FourOfAKind,
@@ -99,9 +99,6 @@ fn get_hand_type(cards: &Vec<usize>, jokers: bool) -> HandType {
         4 => HandType::OnePair,
         _ => HandType::HighCard,
     };
-
-
-    return result;
 }
 
 #[derive(Debug)]
